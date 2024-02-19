@@ -2,10 +2,8 @@ const chai = require('chai');
 const assert = chai.assert;
 
 test('#isTrue, #isNotTrue', function() {
-  assert.isTrue(true, 'true is true');
-  assert.isTrue(!!'double negation', 'double negation of a truthy is true');
-  assert.isNotTrue(
-    { value: 'truthy' },
-    'A truthy object is NOT TRUE (neither is false...)'
+assert.isTrue(true, 'This will pass with the boolean value true');
+assert.isNotTrue('true', 'This will NOT pass with the string value "true"');
+assert.isTrue(1, 'This will NOT pass with the number value 1');
   );
 });
